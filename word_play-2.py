@@ -5,12 +5,13 @@ def no_e():
         outfile = open("words_without_e.txt","w")
 
         for l in infile:
-            has_e = False
+            not_e = True
             for letter in l:
                 if letter != "e":
-                    has_e = True
-                if has_e == True:
-                    outfile.write(l[:-1]+'\n')
+                    not_e = False
+                    break
+            if not_e == True:
+                outfile.write(l[:-1]+'\n')
 
 no_e()
 print("poggers")
